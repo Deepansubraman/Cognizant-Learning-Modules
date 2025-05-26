@@ -1,0 +1,174 @@
+/* Question 1: CSS Inclusion Methods */
+/* Question 2: Syntax and Comments */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Question 3: Selectors Playground */
+#mainHeader {
+  background-color: #004080;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+.eventCard {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+h3, p {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Question 4: Color & Background Styling */
+body {
+  background: #e0f7fa url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Roboto', sans-serif;
+}
+
+section h2 {
+  background: linear-gradient(to right, #0066cc, #33ccff);
+  color: white;
+  padding: 10px;
+}
+
+/* Question 5: Typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+textarea {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+/* Question 6: Link and List Styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #0066cc;
+}
+
+nav ul li a:link {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+nav ul li a:active {
+  color: red;
+}
+
+nav ul li a:visited {
+  color: lightgray;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+/* Question 7: Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Question 8: Box Model & Layout */
+.eventCard {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #007BFF;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+/* Question 9: Multiple Columns */
+.news-article {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Question 10: Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+}
+
+/* Flex Layout for Sections */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+}
+
+/* Question 11: DevTools Use - No CSS needed here, only debugging in DevTools */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    #welcomeBanner { background-color: blue; color: white; padding: 10px; text-align: center; }
+    .highlight { background: yellow; }
+    .image-border { border: 2px solid #333; }
+  </style>
+</head>
+<body onbeforeunload="return confirmExit()">
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Welcome -->
+    <div id="welcomeBanner">
+      Welcome! <span style="color:red; font-weight:bold;">Special Offer!</span>
+    </div>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>Past Events</h2>
+      <table>
+        <caption>Community Highlights</caption>
+        <tr>
+          <td><img src="img1.jpg" alt="E1" title="E1" class="image-border" ondblclick="enlarge(this)"></td>
+          <td><img src="img2.jpg" alt="E2" title="E2" class="image-border" ondblclick="enlarge(this)"></td>
+          <td><img src="img3.jpg" alt="E3" title="E3" class="image-border" ondblclick="enlarge(this)"></td>
+        </tr>
+        <tr>
+          <td><img src="img4.jpg" alt="E4" title="E4" class="image-border" ondblclick="enlarge(this)"></td>
+          <td><img src="img5.jpg" alt="E5" title="E5" class="image-border" ondblclick="enlarge(this)"></td>
+          <td><img src="img6.jpg" alt="E6" title="E6" class="image-border" ondblclick="enlarge(this)"></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration -->
+    <section id="events">
+      <h2>Event Registration</h2>
+      <form id="registrationForm">
+        <label>Name: <input type="text" name="name" placeholder="John" required autofocus></label><br>
+        <label>Email: <input type="email" name="email" placeholder="john@example.com" required></label><br>
+        <label>Date: <input type="date" name="date" required></label><br>
+        <label>Event Type:
+          <select name="type" onchange="savePreference(this); showFee(this)">
+            <option value="">Select</option>
+            <option value="music">Music</option>
+            <option value="sports">Sports</option>
+            <option value="tech">Tech</option>
+          </select>
+        </label><br>
+        <label>Message:<br><textarea onkeydown="countCharacters(this)"></textarea></label><br>
+        <label>Phone: <input type="text" id="phone" onblur="validatePhone()"></label><br>
+        <output id="formOutput"></output><br>
+        <button onclick="submitForm(event)">Submit</button>
+        <button type="button" onclick="clearPreferences()">Clear Preferences</button>
+      </form>
+    </section>
+
+    <!-- Video -->
+    <section>
+      <h2>Promo Video</h2>
+      <video controls width="320" oncanplay="videoReady()">
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <!-- Geolocation -->
+    <section>
+      <button onclick="getLocation()">Find Nearby Events</button>
+      <p id="locationOutput"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City Council</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
