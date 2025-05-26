@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 19.2 - Customize Bootstrap with Sass</title>
+</head>
+<body>
+  <div class="container my-4">
+    <h2>Customizing Bootstrap with Sass</h2>
+    <ol>
+      <li>Open your <code>custom.scss</code> file.</li>
+      <li>Before importing Bootstrap, override variables:
+        <pre><code>$primary: #6610f2;
+$border-radius: 1rem;
+@import "../node_modules/bootstrap/scss/bootstrap";</code></pre>
+      </li>
+      <li>Recompile your SCSS: <code>sass scss/custom.scss css/custom.css</code></li>
+      <li>Reload your HTML to see the new primary color and border radius.</li>
+    </ol>
+  </div>
+</body>
+</html>
